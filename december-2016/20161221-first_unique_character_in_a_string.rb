@@ -44,3 +44,7 @@ p first_unique_character(s1)
 
 s2 = "loveleetcode"
 p first_unique_character(s2)
+
+# Big O Analysis
+# Time complexity: O(N), only iterate through string once.
+# Space complexity: Also O(N), the histogram hash data structure could have as many key/value pairs as N, where N is the length of the string.
