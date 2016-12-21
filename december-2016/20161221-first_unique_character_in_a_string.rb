@@ -48,3 +48,10 @@ p first_unique_character(s2)
 # Big O Analysis
 # Time complexity: O(N), only iterate through string once.
 # Space complexity: Also O(N), the histogram hash data structure could have as many key/value pairs as N, where N is the length of the string.
+
+############# SECOND PASS
+# Pseudocode:
+# Key trick: Using two pointers to save space
+
+# Iterate through the string once. Have one "pointer" that stores the index of the character which is the "uniquest char" thus far
+# The other "pointer" iterates through the string, and also keeps track of occurrences 
