@@ -44,14 +44,8 @@ january-2017
 
 ## Repo Usage
 
-First time usage:
-
-* Clone repo
-* Create branch with your name
-
-Regular usage:
-
-* Run `git pull` to get the latest challenge
+* Run `git pull origin master` to get the latest challenge
+* Checkout a new branch for the new problem (*this means new branch daily*)
 * Find markdown file containing daily problem in appropriate monthly folder
 * Complete problem in same folder in separate file
   * Name the file after the markdown
@@ -73,6 +67,14 @@ e.g.
 
 > sally / 20161221 / first unique character in a string
 
+You are encouraged to make comments in your PR about
+  * how the challenge went for you (was it difficult? how do you feel about the efficiency of your solution?)
+  * feedback about the selection of the problem
+  * tag others for feedback about your solution
+
+See [this PR](https://github.com/parkyngj/algoccountabilibuddies/pull/1)
+ for sample.
+ 
 ## Problem Addition Protocol
 
 * In [this repo](https://github.com/parkyngj/algoccountabilibuddies), go to appropriate monthly folder
