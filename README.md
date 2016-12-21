@@ -44,7 +44,14 @@ january-2017
 
 ## Repo Usage
 
+First time usage:
+
 * Clone repo
+* Create branch with your name
+
+Regular usage:
+
+* Run `git pull` to get the latest challenge
 * Find markdown file containing daily problem in appropriate monthly folder
 * Complete problem in same folder in separate file
   * At the top, copy and paste the problem statement
@@ -65,7 +72,8 @@ e.g.
 
 ## Problem Statement Markdown Protocol
 
-* Name the file in this format, in the appropriate directory: `YYYYMMDD-problem_title.md`
+* In GitHub: Go to appropriate monthly folder, click "New file" to make markdown file with problem inside
+* Name the file in this format: `YYYYMMDD-problem_title.md`
 * At the top, include the source of the problem
 * Copy and paste the problem statement
 
