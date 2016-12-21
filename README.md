@@ -72,10 +72,12 @@ e.g.
 
 ## Problem Addition Protocol
 
-* In GitHub: Go to appropriate monthly folder, click "New file" to make markdown file with problem inside
+* In [this repo](https://github.com/parkyngj/algoccountabilibuddies), go to appropriate monthly folder
+* Click **Create new file** to make markdown file with problem inside
 * Name the file in this format: `YYYYMMDD-problem_title.md`
 * At the top, include the source of the problem
-* Copy and paste the problem statement
+* Include problem statement
+* Commit challenge to the master branch at the bottom by clicking **Commit new file**.
 
 See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/december-2016/20161221-first_unique_character_in_a_string.md) for sample.
 
