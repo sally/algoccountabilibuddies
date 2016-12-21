@@ -44,14 +44,8 @@ january-2017
 
 ## Repo Usage
 
-First time usage:
-
-* Clone repo
-* Create branch with your name
-
-Regular usage:
-
 * Run `git pull origin master` to get the latest challenge
+* Checkout a new branch for the new problem (*this means new branch daily*)
 * Find markdown file containing daily problem in appropriate monthly folder
 * Complete problem in same folder in separate file
   * Name the file after the markdown
