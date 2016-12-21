@@ -24,7 +24,7 @@ def first_uniq_char(string)
 
 
   if char_hash.keys.first
-    char_hash.keys.first
+    string.index(char_hash.keys.first)
   else
     -1
   end
@@ -41,8 +41,3 @@ puts first_uniq_char("bobo")
 # Big O Analysis
 # Time - at least O(n) because we have to iterate through the string array once. Returning values from hash is just O(1)
 # Space - O(n) because we are storing every character in a hash
-
-
-def better_return_first_uniq
-
-end
