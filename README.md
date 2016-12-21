@@ -73,6 +73,14 @@ e.g.
 
 > sally / 20161221 / first unique character in a string
 
+You are encouraged to make comments in your PR about
+  * how the challenge went for you (was it difficult? how do you feel about the efficiency of your solution?)
+  * feedback about the selection of the problem
+  * tag others for feedback about your solution
+
+See [this PR](https://github.com/parkyngj/algoccountabilibuddies/pull/1)
+ for sample.
+ 
 ## Problem Addition Protocol
 
 * In [this repo](https://github.com/parkyngj/algoccountabilibuddies), go to appropriate monthly folder
