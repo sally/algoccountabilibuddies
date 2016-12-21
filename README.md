@@ -63,6 +63,14 @@ e.g.
 
 > sally / 20161221 / first unique character in a string
 
+## Problem Statement Markdown Protocol
+
+* Name the file in this format, in the appropriate directory: `YYYYMMDD-problem_title.md`
+* At the top, include the source of the problem
+* Copy and paste the problem statement
+
+See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/december-2016/20161221-first_unique_character_in_a_string.md) for sample.
+
 ## Problem Selection Rotation
 
 * 20161221 - sally
