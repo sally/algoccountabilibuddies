@@ -60,7 +60,7 @@ Regular usage:
   * At the bottom, include big O time and space complexity analysis
 * Create pull request following instructions below:
 
-## Pull request protocol:
+## Pull Request Protocol
 
 Make the title of your pull request as such:
 
@@ -70,7 +70,7 @@ e.g.
 
 > sally / 20161221 / first unique character in a string
 
-## Problem Statement Markdown Protocol
+## Problem Addition Protocol
 
 * In GitHub: Go to appropriate monthly folder, click "New file" to make markdown file with problem inside
 * Name the file in this format: `YYYYMMDD-problem_title.md`
@@ -84,3 +84,8 @@ See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/d
 * 20161221 - sally
 
 rest TBD
+
+## Tips
+
+* To view only your own code, go to the top of this repo to the search bar and type `is:pr author:GITHUBUSERNAME`
+  * e.g. `is:pr author:parkyngj`
