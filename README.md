@@ -46,7 +46,12 @@ january-2017
 
 * Clone repo
 * Find markdown file containing daily problem in appropriate monthly folder
-* Complete problem in same folder in separate file, then create pull request
+* Complete problem in same folder in separate file
+  * At the top, copy and paste the problem statement
+  * Include pseudocode (optional)
+  * Include driver code (optional)
+  * At the bottom, include big O time and space complexity analysis
+* Create pull request following instructions below:
 
 ## Pull request protocol:
 
