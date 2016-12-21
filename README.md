@@ -60,5 +60,6 @@ e.g.
 
 ## Problem Selection Rotation
 
-20161221 - sally
+* 20161221 - sally
+
 rest TBD
