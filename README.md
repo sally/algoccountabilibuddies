@@ -51,7 +51,7 @@ First time usage:
 
 Regular usage:
 
-* Run `git pull` to get the latest challenge
+* Run `git pull origin master` to get the latest challenge
 * Find markdown file containing daily problem in appropriate monthly folder
 * Complete problem in same folder in separate file
   * Name the file after the markdown
