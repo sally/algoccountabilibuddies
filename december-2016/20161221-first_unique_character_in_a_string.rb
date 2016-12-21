@@ -36,5 +36,5 @@ first_uniq_char("bobo")
 
 
 # Big O Analysis
-# Time - at least O(n) because we have to iterate through the string array once. Not sure about the complexity for the hash methods.
-# Space - at least O(n) because we are storing every character in a hash
+# Time - at least O(n) because we have to iterate through the string array once. Returning values from hash is just O(1)
+# Space - O(n) because we are storing every character in a hash
