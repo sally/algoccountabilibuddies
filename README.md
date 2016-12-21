@@ -45,16 +45,16 @@ january-2017
 ## Repo Usage
 
 * Run `git pull origin master` to get the latest challenge
-* Checkout a new branch for the new problem (*this means new branch daily*)
-* Find markdown file containing daily problem in appropriate monthly folder
+* Checkout new branch for new problem (*this means new branch daily*)
+* Find markdown file containing new problem in appropriate monthly folder
 * Complete problem in same folder in separate file
   * Name the file after the markdown
     * e.g. for `20161221-first_unique_character_in_string.md`, 
       my file is `20161221-first_unique_character_in_string.js`
-  * At the top, copy and paste the problem statement
+  * Copy and paste the problem statement
   * Include pseudocode (optional)
   * Include driver code (optional)
-  * At the bottom, include big O time and space complexity analysis
+  * Include big O time and space analysis
 * Create pull request following instructions below:
 
 ## Pull Request Protocol
@@ -68,21 +68,20 @@ e.g.
 > sally / 20161221 / first unique character in a string
 
 You are encouraged to make comments in your PR about
-  * how the challenge went for you (was it difficult? how do you feel about the efficiency of your solution?)
-  * feedback about the selection of the problem
+  * how the challenge went for you (difficult? efficiency of your solution?)
+  * feedback about the problem selection
   * tag others for feedback about your solution
 
-See [this PR](https://github.com/parkyngj/algoccountabilibuddies/pull/1)
- for sample.
+See [this PR](https://github.com/parkyngj/algoccountabilibuddies/pull/1) for sample.
  
 ## Problem Addition Protocol
 
 * In [this repo](https://github.com/parkyngj/algoccountabilibuddies), go to appropriate monthly folder
 * Click **Create new file** to make markdown file with problem inside
-* Name the file in this format: `YYYYMMDD-problem_title.md`
-* At the top, include the source of the problem
-* Include problem statement
-* Commit challenge to the master branch at the bottom by clicking **Commit new file**.
+* Name file in this format: `YYYYMMDD-problem_title.md`
+* First, include the source of the problem
+* Then, include problem statement
+* Commit challenge to the master at bottom by clicking **Commit new file**.
 
 See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/december-2016/20161221-first_unique_character_in_a_string.md) for sample.
 
