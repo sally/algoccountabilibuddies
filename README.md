@@ -54,6 +54,8 @@ Regular usage:
 * Run `git pull` to get the latest challenge
 * Find markdown file containing daily problem in appropriate monthly folder
 * Complete problem in same folder in separate file
+  * Name the file after the markdown
+    * e.g. for `20161221-first_unique_character_in_string.md`, my file is `20161221-first_unique_character_in_string.rb`
   * At the top, copy and paste the problem statement
   * Include pseudocode (optional)
   * Include driver code (optional)
