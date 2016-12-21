@@ -55,19 +55,3 @@ p first_unique_character(s2)
 
 # Iterate through the string once. Have one "pointer" that stores the index of the character which is the "uniquest char" thus far
 # The other "pointer" iterates through the string, and also keeps track of occurrences
-
-def first_unique_char(str)
-  smallest_unique_index = -1
-
-  str.each_char.with_index do |char, index|
-    if smallest_unique_index < 0
-      smallest_unique_index = index
-    else
-      if char == str[smallest_unique_index]
-        smallest_unique_index = -1
-      end
-    end
-  end
-
-  smallest_unique_index
-end
