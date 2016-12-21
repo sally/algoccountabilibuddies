@@ -13,3 +13,8 @@
 # **Note:** You may assume the string contains only lowercase letters.
 
 ################
+# Pseudocode:
+
+# Make histogram hash of occurrences for string
+# If adding to occurrences makes the value exceed 1, then delete it from the hash
+# At the end, return the first key of the hash
