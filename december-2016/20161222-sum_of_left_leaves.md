@@ -50,6 +50,24 @@ end
 
 Some example Ruby binary trees for your driver code purposes
 
+Example 0:
+
+```ruby
+#    3
+#   / \
+#  9  20
+#    /  \
+#   15   7
+```
+
+```ruby
+root0 = BinaryTreeNode.new(3)
+root0.insert_left(9)
+twenty = root0.insert_right(20)
+twenty.insert_left(15)
+twenty.insert_right(7)
+```
+
 Example 1:
 
 ```ruby
