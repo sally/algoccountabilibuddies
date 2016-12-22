@@ -6,7 +6,7 @@ from [1337code](https://leetcode.com/problems/sum-of-left-leaves/)
 
 Find the sum of all left leaves in a given binary tree.
 
-**Example:**
+**Example Binary Tree**
 
 ```
     3
@@ -20,7 +20,16 @@ There are two left leaves in the binary tree, with values 9 and 15 respectively.
 
 1337code provides a TreeNode class
 
-----
+**Example Christmas Tree**
+
+     *                             
+    /.\                                      
+   /..'\                                     
+   /'.'\                                     
+  /.''.'\                                    
+  /.'.'.\                                    
+ /'.''.'.\                                   
+ ^^^[ ]^^^                                    
 
 **For Driver Code:**
 
@@ -85,7 +94,7 @@ Example 1:
 ```ruby
 root1 = BinaryTreeNode.new(5)
 root1.insert_left(3)
-eight = root1.insert_left(8)
+eight = root1.insert_right(8)
 seven = eight.insert_left(7)
 twelve = eight.insert_right(12)
 ten = twelve.insert_left(10)
