@@ -1,4 +1,5 @@
 Sum of Left Leaves
+
 from [1337code](https://leetcode.com/problems/sum-of-left-leaves/)
 
 ----
