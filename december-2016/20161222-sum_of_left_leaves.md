@@ -106,11 +106,11 @@ root2 = BinaryTreeNode.new(2)
 Example 3:
 
 ```ruby
-#    5
-#   /
-#  3
-# / \
-#1   6
+#     5
+#    /
+#   3
+#  / \
+# 1   6
 ```
 
 ```ruby
