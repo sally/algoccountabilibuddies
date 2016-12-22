@@ -22,6 +22,7 @@ There are two left leaves in the binary tree, with values 9 and 15 respectively.
 
 **Example Christmas Tree**
 
+```
      *                             
     /.\                                      
    /..'\                                     
@@ -29,7 +30,9 @@ There are two left leaves in the binary tree, with values 9 and 15 respectively.
   /.''.'\                                    
   /.'.'.\                                    
  /'.''.'.\                                   
- ^^^[ ]^^^                                    
+ ^^^[ ]^^^    
+
+ ```                                
 
 **For Driver Code:**
 
