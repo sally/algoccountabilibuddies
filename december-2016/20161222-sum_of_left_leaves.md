@@ -20,6 +20,8 @@ There are two left leaves in the binary tree, with values 9 and 15 respectively.
 
 1337code provides a TreeNode class
 
+----
+
 **Example Christmas Tree**
 
 ```
