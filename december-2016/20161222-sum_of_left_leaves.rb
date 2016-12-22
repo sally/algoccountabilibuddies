@@ -25,15 +25,11 @@ end
 # method that takes root of tree and returns the sum of all left leaves
 # make it a recursive method that runs on the right leaf
 # base case is when there is no left leaf
- #   3
- #  / \
- # 9  20
- #    / \
- #   15  7
+
 
 def sum_of_left_leaves(root)
   # set default sum value to 0
-  sum = 0 # does this reset my sum each time it runs D:
+  sum = 0
   return 0 if root == nil
 
   # left
@@ -70,3 +66,14 @@ root2.insert_left(3)
 root2.insert_right(2)
 
 p sum_of_left_leaves(root2)
+
+root3 = BinaryTreeNode.new(7)
+root3.insert_left(2)
+
+p sum_of_left_leaves(root3)
+
+p sum_of_left_leaves(nil)
+
+# Big O
+# Time - Have to traverse through the entire tree w/ recursion so is O(n)
+# Space - Only have to hold the value of sum so O(1)
