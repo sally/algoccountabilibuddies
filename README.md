@@ -97,6 +97,7 @@ See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/d
 * 20161223 - jeff (kangaroos meet)
 * 20161224 - sally (swap nodes in pairs)
 * 20161225 - sally (reverse vowels)
+* 20161226 - sally (house robber)
 
 Rest are TBD
 
