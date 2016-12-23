@@ -33,3 +33,26 @@ class BinaryTreeNode
 end
 
 # Pseudocode: do a depth-first traversal of the tree, collecting all left leaf values into a sum
+
+def sum_of_left_leaves(root)
+  sum = 0
+
+  node_stack = []
+
+  node_stack << root
+
+  until node_stack.empty?
+    current_node = node_stack.pop
+
+    if current_node.left?
+      sum += current_node.left.value
+      node_stack << current_node.left
+    end
+
+    if current_node.right?
+      node_stack << current_node.right
+    end
+  end
+end
+
+#
