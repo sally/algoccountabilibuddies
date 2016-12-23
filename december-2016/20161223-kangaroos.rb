@@ -53,3 +53,7 @@ end
 p kangaroos(43,2,70,2)
 p kangaroos(0,3,4,2)
 p kangaroos(112,9563,8625,244)
+
+# Big O
+# Time: O(1), just doing mathematical operations and constant time checks for booleans
+# Space: O(1), only two variables
