@@ -44,8 +44,11 @@ january-2017
 
 ## Repo Usage
 
+This is assuming that you have already cloned and downloaded the repo for regular use.
+
+* Checkout to master
 * Run `git pull origin master` to get the latest challenge
-* Checkout new branch for new problem (*this means new branch daily*)
+* Checkout new branch for new problem (*this means unique new branch daily*)
 * Find markdown file containing new problem in appropriate monthly folder
 * Complete problem in same folder in separate file
   * Name the file after the markdown
@@ -73,6 +76,8 @@ You are encouraged to make comments in your PR about
   * tag others for feedback about your solution
 
 See [this PR](https://github.com/parkyngj/algoccountabilibuddies/pull/1) for sample.
+
+*Note: Even if you don't have a solution, just including some thoughts or pseudocode in your file is highly recommended.*
  
 ## Problem Addition Protocol
 
@@ -87,9 +92,14 @@ See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/d
 
 ## Problem Selection Rotation
 
-* 20161221 - sally
+* 20161221 - sally (first unique char)
+* 20161222 - chris (sum of left leaves)
+* 20161223 - jeff (kangaroos meet)
+* 20161224 - sally (swap nodes in pairs)
+* 20161225 - sally (reverse vowels)
+* 20161226 - sally (house robber)
 
-rest TBD
+Rest are TBD
 
 ## Tips
 
