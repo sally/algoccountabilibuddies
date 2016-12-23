@@ -92,9 +92,11 @@ See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/d
 
 ## Problem Selection Rotation
 
-* 20161221 - sally
-* 20161222 - chris
-* 20161223 - jeff
+* 20161221 - sally (first unique char)
+* 20161222 - chris (sum of left leaves)
+* 20161223 - jeff (kangaroos meet)
+* 20161224 - sally (swap nodes in pairs)
+* 20161225 - sally (reverse vowels)
 
 Rest are TBD
 
