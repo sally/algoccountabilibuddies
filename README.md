@@ -73,6 +73,8 @@ You are encouraged to make comments in your PR about
   * tag others for feedback about your solution
 
 See [this PR](https://github.com/parkyngj/algoccountabilibuddies/pull/1) for sample.
+
+*Note: Even if you don't have a solution, just including some thoughts or pseudocode in your file is highly recommended.*
  
 ## Problem Addition Protocol
 
@@ -88,8 +90,10 @@ See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/d
 ## Problem Selection Rotation
 
 * 20161221 - sally
+* 20161222 - chris
+* 20161223 - jeff
 
-rest TBD
+Rest are TBD
 
 ## Tips
 
