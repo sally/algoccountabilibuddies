@@ -44,15 +44,25 @@ def sum_of_left_leaves(root)
   until node_stack.empty?
     current_node = node_stack.pop
 
-    if current_node.left?
+    if current_node.left
       sum += current_node.left.value
       node_stack << current_node.left
     end
 
-    if current_node.right?
+    if current_node.right
       node_stack << current_node.right
     end
   end
+
+  sum
 end
 
-#
+# Driver code
+
+root0 = BinaryTreeNode.new(3)
+root0.insert_left(9)
+twenty = root0.insert_right(20)
+twenty.insert_left(15)
+twenty.insert_right(7)
+
+p sum_of_left_leaves(root0)
