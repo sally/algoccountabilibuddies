@@ -66,3 +66,4 @@ twenty.insert_left(15)
 twenty.insert_right(7)
 
 p sum_of_left_leaves(root0)
+#=> returns 24
