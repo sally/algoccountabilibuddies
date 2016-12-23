@@ -44,8 +44,11 @@ january-2017
 
 ## Repo Usage
 
+This is assuming that you have already cloned and downloaded the repo for regular use.
+
+* Checkout to master
 * Run `git pull origin master` to get the latest challenge
-* Checkout new branch for new problem (*this means new branch daily*)
+* Checkout new branch for new problem (*this means unique new branch daily*)
 * Find markdown file containing new problem in appropriate monthly folder
 * Complete problem in same folder in separate file
   * Name the file after the markdown
