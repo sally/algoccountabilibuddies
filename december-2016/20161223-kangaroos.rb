@@ -32,8 +32,15 @@
 
 # just have to assume that the kangaroos will meet at their distance rate travel LCM, or never.
 
-# make assumption that we already checked that (WLOG) x1<x2, v1>v2
 def kangaroos(x1,v1,x2,v2)
+  if x1 > x2 && v1 >= v2
+    return false
+  end
+
+  if x1 < x2 && v1 <= v2
+    return false
+  end
+
   position_difference = (x1 - x2).abs
   rate_difference = (v1 - v2).abs
   if position_difference % rate_difference == 0
@@ -42,3 +49,7 @@ def kangaroos(x1,v1,x2,v2)
     return false
   end
 end
+
+p kangaroos(43,2,70,2)
+p kangaroos(0,3,4,2)
+p kangaroos(112,9563,8625,244)
