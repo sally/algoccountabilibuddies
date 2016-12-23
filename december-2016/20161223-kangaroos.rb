@@ -22,3 +22,23 @@
 # kangaroos_meet([0, 3, 4, 2]) will return true
 # kangaroos_meet([112, 9563, 8625, 244]) will return false
 # ```
+
+# pseudocode:
+# another one that will return false is
+# [0,2,4,2]
+# can short circuit if the starting position of k1 is less than k2, and also k1's rate is less than or equal to k2's rate
+# also return false:
+# [0,3,0,2]
+
+# just have to assume that the kangaroos will meet at their distance rate travel LCM, or never.
+
+# make assumption that we already checked that (WLOG) x1<x2, v1>v2
+def kangaroos(x1,v1,x2,v2)
+  position_difference = (x1 - x2).abs
+  rate_difference = (v1 - v2).abs
+  if position_difference % rate_difference == 0
+    return true
+  else
+    return false
+  end
+end
