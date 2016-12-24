@@ -15,6 +15,12 @@ class LinkedListNode
   end
 end
 
+# Pseudocode: check if there exists a current_node.next.next element - if there is, then we can swap pairs
+# if not, then this means that we've reached the end
+
+# to swap pairs:
+  # need a variable to keep the two nodes, and the more advanced node's successor, and also the less advance's node's predecessor (if it exists - for the head, it won't)
+
 def swap_nodes_in_pairs(head)
-  
+
 end
