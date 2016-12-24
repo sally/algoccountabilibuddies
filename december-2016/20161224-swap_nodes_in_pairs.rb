@@ -64,3 +64,7 @@ newhead = LinkedListNode.new(5)
 
 p swap_adjacent_pairs(newhead);
 # should return 5
+
+# Big O
+# Need to traverse the list once so it's O(n) run time
+# Only need to store a couple of variables so O(1) space
