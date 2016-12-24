@@ -15,12 +15,20 @@ class LinkedListNode
   end
 end
 
-# Pseudocode: check if there exists a current_node.next.next element - if there is, then we can swap pairs
-# if not, then this means that we've reached the end
+# Pseudocode:
+  # start out by setting root to current node
+  # if current node does not have a successor, then end program
+  # if it does:
+    # need variables to keep:
+      # current node
+      # successor
+      # predecessor
+      # super successor
+    # we aim to switch current node and its successor
+    # (there might not be a predecessor nor super successor, this means we are at the head or tail respectively)
 
-# to swap pairs:
-  # need a variable to keep the two nodes, and the more advanced node's successor, and also the less advance's node's predecessor (if it exists - for the head, it won't)
-
-def swap_nodes_in_pairs(head)
-
-end
+# actual swapping process:
+  # point predecessor.next to successor
+  # point current_node.next to super_successor
+  # point successor.next to current_node
+# now set current_node to super_successor (if it's not nil)
