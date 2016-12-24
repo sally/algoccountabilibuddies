@@ -32,3 +32,7 @@ end
   # point current_node.next to super_successor
   # point successor.next to current_node
 # now set current_node to super_successor (if it's not nil)
+
+# big O analysis
+  # time: O(N)
+  # space: constant - only keeping track of 4 variables at any given time
