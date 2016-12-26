@@ -16,3 +16,7 @@
     # when hit vowel, start iterating backwards through the string until also hit a vowel
 
     # if this happens, then swap the two indices and continue advancing the first pointer
+
+# big O analysis
+  # time complexity O(n)
+  # space complexity O(1)
