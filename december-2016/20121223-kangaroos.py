@@ -43,3 +43,24 @@
 # if the return of k1 - k2 % v1 - v2 => 0
 # that means the k1 and k2 meet at the same location with same number of steps
 # else False
+
+def kangaroo_intercept(list):
+    x1 = list[0]
+    v1 = list[1]
+    x2 = list[2]
+    v2 = list[3]
+
+    if x1 > x2 and v1 >= v2:
+        return False
+    elif x1 < x2 and v1 <= v2:
+        return False
+
+    if (x1 - x2) % (v1 - v2) == 0:
+        return True
+    else:
+        return False
+
+print(kangaroo_intercept([43, 2, 70, 2]))
+print(kangaroo_intercept([0, 3, 4, 2]))
+print(kangaroo_intercept([112, 9563, 8625, 244]))
+print(kangaroo_intercept([0, 2, 5, 3]))
