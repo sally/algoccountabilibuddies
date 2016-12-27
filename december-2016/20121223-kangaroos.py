@@ -64,3 +64,7 @@ print(kangaroo_intercept([43, 2, 70, 2]))
 print(kangaroo_intercept([0, 3, 4, 2]))
 print(kangaroo_intercept([112, 9563, 8625, 244]))
 print(kangaroo_intercept([0, 2, 5, 3]))
+
+
+# big o
+# time and space complexity: O(1) because constants
