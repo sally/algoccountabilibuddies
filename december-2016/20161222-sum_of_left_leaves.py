@@ -182,7 +182,7 @@ def left_leaves_Sum(root):
         result += left_leaves_Sum(root.right)
     return result
 
-# test
+# test 1
 root = Node(3)
 root.left = Node(9)
 root.right = Node(20)
@@ -190,6 +190,7 @@ root.right.left = Node(15)
 root.right.right = Node(7)
 print ("The total is", left_leaves_Sum(root))
 
+# test 2
 root_2 = Node(20)
 root_2.left = Node(9)
 root_2.right = Node(49)
@@ -200,3 +201,10 @@ root_2.left.left = Node(5)
 root_2.left.right = Node(12)
 root_2.left.right.right = Node(12)
 print("The total of the second tree is", left_leaves_Sum(root_2))
+
+
+# test 3: if there are no left leaves
+root_3 = Node(6)
+root_3.right = Node(12)
+root_3.right.right = Node(30)
+print("The total of the third tree is", left_leaves_Sum(root_3))
