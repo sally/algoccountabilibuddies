@@ -19,3 +19,14 @@
 # We’re defining `n` as the number of `unsorted_scores` because we’re expecting the number of players to keep climbing.
 #
 # And we'll treat `highest_possible_score` as a constant instead of factoring it into our big O time and space costs, because the highest possible score isn’t going to change.
+
+## pseudocode
+
+# call the highest_possible_score M
+# since we know the highest score possible, can make an array of length M, with entries initialized at 0
+# as we iterate through given array, update the iteratee's corresponding index in the histogram array, keeping track of occurrences
+# iterate through histogram array, making new array of numbers based on indices which keep track of occurrences of the numbers
+
+def sort_scores(unsorted_scores, highest_possible_score)
+  
+end
