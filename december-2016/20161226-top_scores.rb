@@ -28,5 +28,17 @@
 # iterate through histogram array, making new array of numbers based on indices which keep track of occurrences of the numbers
 
 def sort_scores(unsorted_scores, highest_possible_score)
-  
+  histogram_array = [0] * highest_possible_score
+
+  unsorted_scores.each do |score|
+    histogram_array[score - 1] += 1
+  end
+
+  sorted_scores = []
+
+  histogram_array.each_with_index do |score_occurrences, index|
+    score_occurrences.times do |occurrences|
+      sorted_scores << index + 1
+    end
+  end
 end
