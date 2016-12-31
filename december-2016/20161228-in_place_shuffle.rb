@@ -9,3 +9,13 @@
 # iterate over array to shuffle:
 # for each iteratee, calculate x = get_random(iteratee_index, length - 1)
   # swap the iteratee with item at index x
+
+def in_place_shuffle(array)
+  array.each_with_index do |element, index|
+    switch_index = rand(index, array.length - 1)
+
+    array[index], array[switch_index] = array[switch_index], element
+  end
+
+  array
+end
