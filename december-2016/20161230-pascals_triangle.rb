@@ -39,3 +39,32 @@
     # C = C + 1
 
 # return A
+
+def pascal(n)
+  triangle_array = []
+  counter = 0
+
+  until counter == n
+    if triangle_array.empty?
+      triangle_array.push([1])
+      counter += 1
+    else
+      pre_layer = triangle_array[counter - 1]
+      new_layer = []
+
+      pre_layer.each_with_index do |number, index|
+        if index == 0 || index == pre_layer.length - 1
+          new_layer.push(1)
+        else
+          previous_number = pre_layer[index - 1]
+          new_layer.push(number + previous_number)
+        end
+      end
+
+      triangle_array.push(new_layer)
+      counter += 1
+    end
+  end
+
+  triangle_array
+end
