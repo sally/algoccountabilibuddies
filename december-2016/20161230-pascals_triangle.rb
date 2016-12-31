@@ -53,7 +53,7 @@ def pascal(n)
       new_layer = []
 
       pre_layer.each_with_index do |number, index|
-        if index == 0 || index == pre_layer.length - 1
+        if index == 0
           new_layer.push(1)
         else
           previous_number = pre_layer[index - 1]
@@ -61,6 +61,7 @@ def pascal(n)
         end
       end
 
+      new_layer.push(1)
       triangle_array.push(new_layer)
       counter += 1
     end
@@ -68,3 +69,5 @@ def pascal(n)
 
   triangle_array
 end
+
+p pascal(4)
