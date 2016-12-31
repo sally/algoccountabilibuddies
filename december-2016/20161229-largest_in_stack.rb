@@ -15,11 +15,20 @@ class Stack
   # initialize an empty array
   def initialize
       @items = []
+      @max_stack = []
   end
 
   # push a new item to the last index
   def push(item)
       @items.push(item)
+
+      if @max_stack.empty?
+        @max_stack.push(item)
+      end
+
+      if item > @max_stack.last
+        @max_stack.push(item)
+      end
   end
 
   # remove the last item
@@ -29,6 +38,11 @@ class Stack
       if @items.empty?
           return nil
       end
+
+      if @max_stack.last == @items.last
+        @max_stack.pop()
+      end
+
       return @items.pop()
   end
 
@@ -38,5 +52,9 @@ class Stack
           return nil
       end
       return @items[-1]
+  end
+
+  def get_max()
+    @max_stack.last()
   end
 end
