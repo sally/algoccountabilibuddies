@@ -41,4 +41,14 @@ def sort_scores(unsorted_scores, highest_possible_score)
       sorted_scores << index + 1
     end
   end
+
+  sorted_scores
 end
+
+# driver code
+
+unsorted_scores = [37, 89, 41, 65, 91, 53]
+highest_possible_score = 100
+
+p sort_scores(unsorted_scores, highest_possible_score)
+# returns [37, 41, 53, 65, 89, 91]
