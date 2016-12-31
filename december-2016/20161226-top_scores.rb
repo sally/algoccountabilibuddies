@@ -52,3 +52,8 @@ highest_possible_score = 100
 
 p sort_scores(unsorted_scores, highest_possible_score)
 # returns [37, 41, 53, 65, 89, 91]
+
+# big o analysis
+
+# time: O(n)
+# space: O(n)
