@@ -71,3 +71,5 @@ def pascal(n)
 end
 
 p pascal(4)
+
+p pascal(10)
