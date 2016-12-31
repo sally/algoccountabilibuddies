@@ -12,10 +12,15 @@
 
 def in_place_shuffle(array)
   array.each_with_index do |element, index|
-    switch_index = rand(index, array.length - 1)
+    switch_index = rand(index..(array.length - 1))
 
     array[index], array[switch_index] = array[switch_index], element
   end
 
   array
 end
+
+# driver code
+
+array1 = [1,2,3,4,5,6,7,8,9,10]
+p in_place_shuffle(array1)
