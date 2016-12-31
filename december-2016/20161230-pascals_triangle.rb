@@ -73,3 +73,8 @@ end
 p pascal(4)
 
 p pascal(10)
+
+# big o analysis
+# time and space: O(N!)?
+  # reasoning: the resulting array to return is of size N!
+  # operations needed to build the resulting array is N!
