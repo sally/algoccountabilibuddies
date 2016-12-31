@@ -36,5 +36,6 @@
         # else:
           # push sum of iteratee and element in pre-layer preceding iteratee
     # push new-layer into A
+    # C = C + 1
 
 # return A
