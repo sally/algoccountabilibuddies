@@ -17,16 +17,16 @@
 # pseudocode
 
 # let N = input #
-# initialize empty pascal's triangle array to return, call it A
-# initialize counter C at 0
+# let A = [] (pascal's triangle array to return)
+# let C = 0 (for counter)
 
 # until C = N:
   # if A is empty:
     # push [1] to A
     # C = C + 1
   # else:
-    # look at element in index C - 1 in A, call it pre-layer
-    # initialize array to push into A, call it new-layer
+    # let pre-layer be the element A[C-1]
+    # let new-layer = [] (array to push into A)
     # iterate through pre-layer:
       # look at iteratee's index
         # if it is 0:
