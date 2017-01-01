@@ -11,21 +11,17 @@
 # Store the max sum between sets of 2 or 3 adjacent houses
 # And scan till the end of the array to tally up the total
 
-
-
 def grab_money(house_array)
 
   max_three = max_two = pre = 0
 
   for curr_house in house_array
-    # p curr_house
-    p max_three = max_two
-    p max_two = pre
-    p pre = [max_three + curr_house, max_two + curr_house].max
-    p curr_house
-    p "-------------"
+    max_three = max_two
+    max_two = pre
+    pre = [max_three + curr_house, max_two + curr_house].max
   end
   return [max_two, pre].max
 end
 
+# Doesn't quite work yet, it is scanning one step too early so is adding every value in the array
 p grab_money([1, 7, 9, 4])
