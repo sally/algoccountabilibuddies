@@ -19,6 +19,10 @@ class BinaryTreeNode
 end
 
 def sum_of_left_leaves(root)
+  sum = 0
+  if root.left != nil
+    
+  end
 end
 
 ###########################
