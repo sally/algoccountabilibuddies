@@ -27,11 +27,30 @@ class Stack
         return @items[-1]
     end
 
-    def get_max
-      
+    def get_max()
+      @max = 0
+      @items.each do |num|
+        if num > @max
+          @max = num
+        else
+          @items.reverse.pop
+        end
+      end
+      @max
     end
 end
 
 ###########################
 ##  ｄｒｉｖｅｒ　ｃｏｄｅ  ##
 ###########################
+
+s = Stack.new()
+s.push(100000)
+s.push(1)
+s.push(2)
+s.push(5)
+s.push(999999999)
+s.push(3)
+s.push(4)
+s.push(100)
+puts s.get_max
