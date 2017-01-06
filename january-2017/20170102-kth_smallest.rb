@@ -35,7 +35,7 @@ def extract_min(heap)
 
   while !(heap[current_index*2 - 1].nil? && heap[current_index*2].nil?)
     if heap[current_index*2 - 1] && heap[current_index*2]
-      if heap[current_index - 1] > heap[current_index*2 - 1] && heap[current_index*2 - 1] < heap[current_index*2]
+      if heap[current_index - 1] > heap[current_index*2 - 1] && heap[current_index*2 - 1] <= heap[current_index*2]
         index_to_swap_with = current_index*2 - 1
       elsif heap[current_index - 1] > heap[current_index*2] && heap[current_index*2 - 1] > heap[current_index*2]
         index_to_swap_with = current_index*2
@@ -60,18 +60,41 @@ def extract_min(heap)
   min_to_return
 end
 
+def get_min(min_heap)
+  min_heap.first
+end
+
 def get_kth_smallest(array, k)
   min_heapified_array = []
 
   array.each do |number|
     insert_into_min_heap(min_heapified_array, number)
   end
+
+  p min_heapified_array
+
+  (k-1).times do |num|
+    extract_min(min_heapified_array)
+    p min_heapified_array
+  end
+
+  get_min(min_heapified_array)
 end
 
-p insert_into_min_heap([15, 30, 40], 10)
+# driver code
+
+insert_into_min_heap([15, 30, 40], 10)
 
 min_heap = [1,5,6,13,12,11]
 
-p insert_into_min_heap(min_heap, 2)
+insert_into_min_heap(min_heap, 2)
 
-p extract_min(min_heap)
+extract_min(min_heap)
+
+array = [6,7,9,3,4,1,6,2,10]
+
+p get_kth_smallest(array, 1)
+p get_kth_smallest(array, 2)
+p get_kth_smallest(array, 3)
+p get_kth_smallest(array, 4)
+p get_kth_smallest(array, 5)
