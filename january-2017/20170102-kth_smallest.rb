@@ -14,7 +14,7 @@ def insert_into_min_heap(min_heap, element)
   min_heap << element
   current_index = min_heap.length
 
-  while current_index > 1 && element < min_heap[[(current_index / 2) - 1, 0].max]
+  while current_index > 1 && element < min_heap[(current_index / 2) - 1]
     larger_element = min_heap[(current_index / 2) - 1]
 
     min_heap[(current_index / 2) - 1] = element
@@ -25,6 +25,8 @@ def insert_into_min_heap(min_heap, element)
 
   min_heap
 end
+
+
 
 def get_kth_smallest(array, k)
   min_heapified_array = []
