@@ -98,3 +98,10 @@ p get_kth_smallest(array, 2)
 p get_kth_smallest(array, 3)
 p get_kth_smallest(array, 4)
 p get_kth_smallest(array, 5)
+
+### big O analysis
+## time complexity:
+# note that inserting into the min heap takes O(logN) time, as does extracting from min heap.
+# so, effectively, we are doing (at worst) 2logN + N operations - which is just O(N).
+## space complexity:
+# we build a heap of size N according to the input array, so it's also O(N)
