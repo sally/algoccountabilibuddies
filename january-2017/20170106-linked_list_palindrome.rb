@@ -52,3 +52,7 @@ def linked_list_palindrome(n, head)
 
   true
 end
+
+# big o analysis
+# time complexity: O(n)
+# space complexity: the stack we get grows to size n/2, so it is also O(n)
