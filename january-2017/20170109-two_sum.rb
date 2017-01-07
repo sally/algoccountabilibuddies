@@ -18,3 +18,23 @@
   # build hash of occurrences of numbers while iterating through array
   # for k in array:
     # look for target_num - k in hash map
+
+def two_sum(array, target_num)
+  histogram = {}
+
+  for k in (0...array.length)
+    if histogram[target_num - array[k]]
+      return "Possible combination is #{array[k]} + #{target_num - array[k]} = #{target_num}"
+    else
+      histogram[array[k]] = true
+    end
+  end
+
+  false
+end
+
+p two_sum([2,7,11,15], 9)
+
+# complexity analysis
+# time: O(N) for one iteration
+# space: O(N) for histogram hash size
