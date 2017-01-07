@@ -1,4 +1,4 @@
-Source: Leetcode (locked)
+Source: [Leetcode](https://tonycao.gitbooks.io/leetcode-locked/content/LeetCode%20Locked/c1.4.html)
 
 Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
 
