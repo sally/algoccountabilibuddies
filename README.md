@@ -92,7 +92,7 @@ See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/d
 
 ## Problem Selection Rotation
 
-Problem selections accounted for until Jan 6th, 2017. Happy holidays y'all <3
+Defunct for now until someone says they'd like to contribute to picking problems~
 
 ## Tips
 
