@@ -68,23 +68,95 @@ end
 p graphify_dictionary(['cat', 'bat', 'bet', 'bed', 'at', 'ad', 'ed'])
 
 # utility function to insert into a priority queue (inserting into a min heap)
-def insert_into_p_queue(queue, value)
-  queue << value
-
-  current_index = queue.length
-
-  while current_index > 1 && value < queue[(current_index / 2) - 1]
-    heap[(current_index / 2) - 1], heap[current_index - 1] = heap[current_index - 1], heap[(current_index / 2) - 1]
-
-    current_index = (current_index / 2)
-  end
-
-  heap
+def insert_into_p_queue(queue, word_info)
+  queue << word_info
+  percolate_up_by_distance(queue, queue.length - 1)
 end
 
+def percolate_up_by_distance(queue, index)
+  while index > 1 && queue[index][:distance] < queue[(index/2)][:distance]
+    queue[index], queue[(index / 2)] = queue[(index / 2)], queue[index]
+    index = (index / 2)
+  end
+
+  queue
+end
+
+def extract_from_p_queue(queue)
+  info_to_return = queue[1]
+
+  queue[1] = queue.pop
+
+  percolate_down_by_distance(queue, 1)
+
+  info_to_return
+end
+
+def percolate_down_by_distance(queue, index)
+  while index < queue.length - 1
+    if queue[index*2] && queue[index*2 + 1]
+      if queue[index*2][:distance] < queue[index][:distance] && queue[index*2][:distance] <= queue[index*2 + 1][:distance]
+        queue[index*2], queue[index] = queue[index], queue[index*2]
+        index = index*2
+      elsif queue[index*2 + 1][:distance] < queue[index][:distance] && queue[index*2 + 1][:distance] < queue[index*2][:distance]
+        queue[index*2 + 1], queue[index] = queue[index], queue[index*2 + 1]
+        index = index*2 + 1
+      else
+        break
+      end
+    elsif queue[index*2] && !queue[index*2 + 1] && queue[index*2][:distance] < queue[index][:distance]
+      queue[index*2], queue[index] = queue[index], queue[index*2]
+      index = index*2
+    elsif !queue[index*2] && queue[index*2 + 1] && queue[index*2 + 1][:distance] < queue[index][:distance]
+      queue[index*2 + 1], queue[index] = queue[index], queue[index*2 + 1]
+      index = index*2 + 1
+    else
+      break
+    end
+  end
+
+  queue
+end
+
+p sample_queue = [nil, {word: 'bat', distance: 1}, {word: 'bed', distance: 3}]
+
+p insert_into_p_queue(sample_queue, {word: 'bet', distance: 2})
+p insert_into_p_queue(sample_queue, {word: 'cat', distance: 0})
+p extract_from_p_queue(sample_queue)
+
+p sample_queue
+
 # dijkstra's to find shortest path between word1 and word2
-def transform_word(dictionary, graph)
-  
+def transform_word(dictionary, word1, word2)
+  edges = graphify_dictionary(dictionary)
+
+  exhausted = Array.new(dictionary.length, false)
+
+  # entries in the priority queue are of the form: {word: 'cat', distance: 0}
+  priority_queue = [nil]
+  priority_queue << {word: word1, distance: 0}
+
+  until priority_queue.length == 1
+    current_word_info = priority_queue.pop
+    current_word = current_word_info[:word]
+    current_distance = current_word_info[:distance]
+
+    adjacent_nodes = edges[current_word]
+
+    for k in (0...adjacent_nodes.length) do
+      if exhausted[dictionary.index(adjacent_nodes[k])]
+        next
+      end
+
+      if priority_queue.map{|word_info| word_info[:word]}.include?(adjacent_nodes[k])
+
+      else
+
+      end
+    end
+
+    exhausted[dictionary.index(current_word)] = true
+  end
 end
 
 ##################################### FIRST ATTEMPT
