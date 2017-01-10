@@ -29,3 +29,43 @@
   # iterate through boggle and look for first character
   # if found first character:
     # start depth first search for rest of characters
+
+def boggle_solver(dictionary, boggle)
+  words_present = []
+
+  rows = boggle.length
+  columns = boggle.first.length
+
+  for i in 0...rows do
+    for j in 0...columns do
+      for k in 0...dictionary.length do
+        if boggle[i][j] == dictionary[k][0]
+          if dfs_for_letters(boggle, dictionary[k], i, j) == true
+            words_present.push(dictionary[k])
+          end
+        end
+      end
+    end
+  end
+
+  words_present
+end
+
+def dfs_for_letters(boggle, word, row, column, visited = Array.new(boggle.length) { Array.new(3) { false }})
+  return true if word.length == 1
+
+  row_directions    = [-1, -1, -1,  0,  0,  1, 1, 1]
+  column_directions = [-1,  0,  1, -1,  1, -1, 0, 1]
+
+  visited[row][column] = true
+
+  for n in 0...8 do
+    if is_safe?(boggle, word, row + row_directions[n], column + column_directions[n], visited)
+      return true if dfs_for_letters(boggle, word[1..-1], row + row_directions[n], column + column_directions[n], visited) == true
+    end
+  end
+end
+
+def is_safe?(boggle, word, row, column, visited)
+  row >= 0 && row < boggle.length && column >= 0 && column < boggle.first.length && !visited[row][column] && boggle[row][column] == word[1]
+end
