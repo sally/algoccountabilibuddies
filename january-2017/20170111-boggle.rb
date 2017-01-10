@@ -69,3 +69,41 @@ end
 def is_safe?(boggle, word, row, column, visited)
   row >= 0 && row < boggle.length && column >= 0 && column < boggle.first.length && !visited[row][column] && boggle[row][column] == word[1]
 end
+
+##################
+
+# driver code:
+
+boggle1 = [
+            ['G', 'I', 'Z'],
+            ['U', 'E', 'K'],
+            ['Q', 'S', 'E']
+          ]
+
+dictionary1 = ['GEEKS', 'FOR', 'QUIZ', 'GO']
+
+p boggle_solver(dictionary1, boggle1)
+# => returns ['GEEKS', 'QUIZ']
+
+boggle2 = [
+            ['E', 'A', 'M', 'S'],
+            ['E', 'G', 'I', 'Z'],
+            ['E', 'U', 'E', 'K'],
+            ['U', 'Q', 'S', 'E']
+          ]
+
+dictionary1 = ['GEEKS', 'FOR', 'QUIZ', 'GO']
+
+p boggle_solver(dictionary1, boggle2)
+# => returns ['GEEKS', 'QUIZ']
+
+boggle3 = [
+            ['O', 'A', 'A', 'N'],
+            ['E', 'T', 'R', 'I'],
+            ['I', 'H', 'K', 'R'],
+            ['I', 'F', 'L', 'V']
+          ]
+
+dictionary2 = ['OAT', 'SYSTEM', 'RAIN', 'RAM', 'RATE', 'EARTH', 'TRAIN', 'IRATE']
+
+p boggle_solver(dictionary2, boggle3)
