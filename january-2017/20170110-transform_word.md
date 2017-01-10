@@ -11,3 +11,7 @@ Then transform_word('cat', 'bed') returns ['cat', 'bat', 'bet', 'bed'].
 If dictionary = ['cat, 'bat', 'bed', 'at', 'ad', 'ed']
 
 Then transform_word('cat', 'bed') returns ['cat', 'at', 'ad', 'ed', 'bed'].
+
+If dictionary = 'cat', 'bat', 'bed', 'ad', 'ed']
+
+Then transform_word('cat', 'bed') returns [].
