@@ -11,31 +11,31 @@
 # if two words are equal, then problem becomes finding the shortest distance between two distinct numbers in array
 
 def make_indices_hash(words)
-  indices_hash = Hash.new {|hash, key| = hash[key] = []}
+  indices_hash = Hash.new {|hash, key| hash[key] = []}
 
   for k in 0...words.length do
-    hash[words[k]] << k
+    indices_hash[words[k]] << k
   end
 
   indices_hash
 end
 
 def find_smallest_difference(nums)
-  raise "Please enter an array with more than one number to find the smallest difference between two distinct numbers in an array."
+  raise "Please enter an array with more than one number to find the smallest difference between two distinct numbers in an array." if nums.length < 2
 
   smallest_difference = Float::INFINITY
 
   for k in 0...nums.length do
     break if k == nums.length - 1
 
-    smallest_difference = [smallest_difference, (nums[k] - nums[k+1]).abs]
+    smallest_difference = [smallest_difference, (nums[k] - nums[k+1]).abs].min
   end
 
   smallest_difference
 end
 
 def shortest_distance(words, word1, word2)
-  indices_hash = make_indices_hash(words)
+  p indices_hash = make_indices_hash(words)
 
   if word1 == word2
     return find_smallest_difference(indices_hash[word1])
@@ -49,7 +49,7 @@ def shortest_distance(words, word1, word2)
 
   smallest_distance = Float::INFINITY
 
-  until i == indices_hash[word1].length && j == indices_hash[word2].length
+  while i < indices_hash[word1].length && j < indices_hash[word2].length
     smallest_distance = [smallest_distance, (indices_hash[word1][i] - indices_hash[word2][j]).abs].min
 
     if indices_hash[word1][i] < indices_hash[word2][j]
@@ -59,5 +59,46 @@ def shortest_distance(words, word1, word2)
     end
   end
 
-  return smallest_difference
+  return smallest_distance
 end
+
+p shortest_distance(["practice", "makes", "perfect", "coding", "makes"], "coding", "practice")
+p shortest_distance(["practice", "makes", "perfect", "coding", "makes"], "makes", "coding")
+p shortest_distance(["practice", "makes", "perfect", "coding", "makes"], "makes", "makes")
+
+#####################################
+
+def minimal_differences_bw_sorted(array1, array2)
+  i = 0
+  j = 0
+
+  shortest_distance = Float::INFINITY
+
+  while i < array1.length && j < array2.length
+    if array1[i] == array2[j]
+      return 0
+    end
+
+    shortest_distance = [shortest_distance, (array1[i] - array2[j]).abs].min
+
+    if array1[i] < array2[j]
+      i += 1
+    else
+      j += 1
+    end
+  end
+
+  shortest_distance
+end
+
+array1 = [3, 27, 45, 68, 70, 81, 99]
+array2 = [9, 16, 25, 35, 84]
+
+p minimal_differences_bw_sorted(array1, array2)
+# => minimum difference is 2 (27-25)
+
+array3 = [12, 34, 57, 61, 69, 80]
+array4 = [27, 39, 48, 51, 79]
+
+p minimal_differences_bw_sorted(array3, array4)
+# => minimum difference is 1 (80-79)
