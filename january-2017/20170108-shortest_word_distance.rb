@@ -70,7 +70,7 @@ p minimal_differences_bw_sorted(array3, array4)
 # => minimum difference is 1 (80-79)
 
 def shortest_distance(words, word1, word2)
-  p indices_hash = make_indices_hash(words)
+  indices_hash = make_indices_hash(words)
 
   if word1 == word2
     return find_smallest_difference(indices_hash[word1])
