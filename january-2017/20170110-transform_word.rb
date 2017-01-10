@@ -85,9 +85,12 @@ end
 def extract_from_p_queue(queue)
   info_to_return = queue[1]
 
-  queue[1] = queue.pop
-
-  percolate_down_by_distance(queue, 1)
+  if queue.length > 2
+    queue[1] = queue.pop
+    percolate_down_by_distance(queue, 1)
+  else
+    queue.pop
+  end
 
   info_to_return
 end
@@ -128,33 +131,70 @@ p sample_queue
 
 # dijkstra's to find shortest path between word1 and word2
 def transform_word(dictionary, word1, word2)
+  path = []
+
   edges = graphify_dictionary(dictionary)
 
-  exhausted = Array.new(dictionary.length, false)
+  exhausted_words = []
 
   # entries in the priority queue are of the form: {word: 'cat', distance: 0}
   priority_queue = [nil]
-  priority_queue << {word: word1, distance: 0}
+  priority_queue << {word: word1, distance: 0, previous_word: nil}
 
   until priority_queue.length == 1
     current_word_info = extract_from_p_queue(priority_queue)
     current_word = current_word_info[:word]
     current_distance = current_word_info[:distance]
 
-    adjacent_nodes = edges[current_word]
+    adjacent_words = edges[current_word]
 
-    for k in (0...adjacent_nodes.length) do
-      if exhausted[dictionary.index(adjacent_nodes[k])]
+    for k in (0...adjacent_words.length) do
+      if adjacent_words[k] == word2
+        path.unshift(current_word, word2)
+        previous_word = current_word_info[:previous_word]
+
+        while previous_word
+          path.unshift(previous_word)
+          previous_word = exhausted_words.find{|word_info| word_info[:word] == previous_word}[:previous_word]
+        end
+
+        return path
+      end
+
+      if exhausted_words.map{|word_info| word_info[:word]}.include?(adjacent_words[k])
         next
       end
 
-      if priority_queue.map{|word_info| word_info[:word]}.include?(adjacent_nodes[k])
+      if priority_queue[1..-1].map{|word_info| word_info[:word]}.include?(adjacent_words[k])
+        adjacent_word_info = priority_queue[1..-1].find {|word_info| word_info[:word] = adjacent_words[k]}
 
+        if adjacent_word_info[:distance] > current_distance + 1
+          adjacent_word_index = priority_queue.index(adjacent_word_info)
+          priority_queue[adjacent_word_index] = {word: adjacent_word_info[:word], distance: current_distance + 1, previous_word: current_word}
+          percolate_up_by_distance(priority_queue, adjacent_word_index)
+        end
       else
-
+        insert_into_p_queue(priority_queue, {word: adjacent_words[k], distance: current_distance + 1, previous_word: current_word})
       end
     end
 
-    exhausted[dictionary.index(current_word)] = true
+    exhausted_words << current_word_info
   end
+
+  path
 end
+
+p transform_word(['cat', 'bat', 'bet', 'bed', 'at', 'ad', 'ed'], 'cat', 'bed')
+
+# big o analysis:
+# I'll just do some big O analysis for the separate components of this problem.
+# Inserting into a min/max heap: O(logN)
+# Extracting from a min/max heap: O(logN)
+
+# dijkstra's algorithm big O is O(E + Vlog(V)), where E is edges, V is vertices
+  # E because we must loop through all of the edges worst case
+  # Vlog(V) for priority queue bookkeeping
+
+# building edge graph for dictionary: suppose V is the number of vertices
+  # then run time is O(V^2)
+  # space complexity is also O(V^2)
