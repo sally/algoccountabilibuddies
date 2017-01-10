@@ -198,3 +198,6 @@ p transform_word(['cat', 'bat', 'bet', 'bed', 'at', 'ad', 'ed'], 'cat', 'bed')
 # building edge graph for dictionary: suppose V is the number of vertices
   # then run time is O(V^2)
   # space complexity is also O(V^2)
+
+# future question to consider
+# what if target word is at the last 2 units of edit distance of any word away?
