@@ -107,3 +107,10 @@ boggle3 = [
 dictionary2 = ['OAT', 'SYSTEM', 'RAIN', 'RAM', 'RATE', 'EARTH', 'TRAIN', 'IRATE']
 
 p boggle_solver(dictionary2, boggle3)
+
+# big o analysis:
+  # time: for traversal O(N*M*K) where N and M are rows, columns of boggle resp, and K is size of dictionary
+  #       for search, is at worse N*M
+  # so time is really atrocious - O(N^2 * M^2 * K)
+
+  # space: O(N*M), since we keep track of visited in a matrix as well
