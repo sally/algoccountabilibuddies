@@ -114,3 +114,10 @@ p boggle_solver(dictionary2, boggle3)
   # so time is really atrocious - O(N^2 * M^2 * K)
 
   # space: O(N*M), since we keep track of visited in a matrix as well
+
+# follow up:
+  # another way to solve: using tries (prefix trees)
+  # see: http://www.circlemud.org/jelson/software/boggle.html
+  # http://faculty.ycp.edu/~dhovemey/spring2010/cs350/assign/assign4.html
+  # https://developmentality.wordpress.com/tag/depth-first-search/
+  # http://exceptional-code.blogspot.com/2012/02/solving-boggle-game-recursion-prefix.html
