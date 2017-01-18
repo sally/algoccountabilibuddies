@@ -39,3 +39,6 @@ def max_slice_sum(array)
     max_so_far = [max_ending_here, max_so_far].max
   end
 end
+
+# big o analysis:
+  # O(N) time, O(1) space
