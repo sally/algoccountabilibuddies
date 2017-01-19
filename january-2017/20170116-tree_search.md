@@ -3,7 +3,7 @@ Source: No source.
 Write methods for traversing a binary-tree in the following ways:
 1. depth-first (pre-order)
 2. depth-first (in-order)
-3. depth-first (post-ordeR)
+3. depth-first (post-order)
 4. breadth-first
 
 See [sum of left leaves](https://github.com/parkyngj/algoccountabilibuddies/blob/master/december-2016/20161222-sum_of_left_leaves.md) problem for binary tree node implementation and example trees.
