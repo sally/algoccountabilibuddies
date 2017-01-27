@@ -92,7 +92,7 @@ See [this file](https://github.com/parkyngj/algoccountabilibuddies/blob/master/d
 
 ## Problem Selection Rotation
 
-Defunct for now until someone says they'd like to contribute to picking problems~
+Defunct and dormant. Feel free to let the team know if you'd like to take up the mantle in picking daily problems!
 
 ## Tips
 
