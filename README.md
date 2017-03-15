@@ -98,3 +98,15 @@ Defunct and dormant. Feel free to let the team know if you'd like to take up the
 
 * To view only your own code, go to the top of this repo to the search bar and type `is:pr author:GITHUBUSERNAME`
   * e.g. `is:pr author:parkyngj`
+
+## List of Members (added as collaborators)
+
+* Alex Carroll ([@lexac1](https://github.com/lexac1))
+* Alex Min ([@mintheredonethat](https://github.com/mintheredonethat))
+* Ali Baker ([@thealicat13](https://github.com/thealicat13))
+* Chris Chan ([@christopherchan35](https://github.com/christopherchan35)
+* Jeff Lee ([@jlee22](https://github.com/jlee22))
+* Jonathan Lok ([@lokpio](https://github.com/lokpio))
+* Nestor Alvarez ([@xdkernelx](https://github.com/xdkernelx))
+* Paula Lee ([@pdlee877](https://github.com/pdlee877))
+* Sally Park ([@sally](https://github.com/sally))
