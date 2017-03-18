@@ -104,7 +104,7 @@ Defunct and dormant. Feel free to let the team know if you'd like to take up the
 * Alex Carroll ([@lexac1](https://github.com/lexac1))
 * Alex Min ([@mintheredonethat](https://github.com/mintheredonethat))
 * Ali Baker ([@thealicat13](https://github.com/thealicat13))
-* Chris Chan ([@christopherchan35](https://github.com/christopherchan35)
+* Chris Chan ([@christopherchan35](https://github.com/christopherchan35))
 * Jeff Lee ([@jlee22](https://github.com/jlee22))
 * Jonathan Lok ([@lokpio](https://github.com/lokpio))
 * Nestor Alvarez ([@xdkernelx](https://github.com/xdkernelx))
